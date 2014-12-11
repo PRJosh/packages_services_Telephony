@@ -89,7 +89,7 @@ public class IccNetworkDepersonalizationPanel extends IccPanel {
 
         //PERSOSUBSTATE_SIM_NETWORK,
         {R.string.label_ndp,                R.string.requesting_unlock,
-        R.string.unlock_failed,             R.string.unlock_success},
+        R.string.unlock_failed,          R.string.unlock_success},
 
         //PERSOSUBSTATE_SIM_NETWORK_SUBSET,
         {R.string.label_nsdp,               R.string.requesting_nw_subset_unlock,
