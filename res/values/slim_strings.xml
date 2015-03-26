@@ -239,9 +239,9 @@
     <!-- Call Independent services screen title-->
     <string name="call_ind_services">Call Independent Services</string>
     <!-- button name for launching sub1, sub2 screen for Multi Sim Functionality-->
-    <string name="callind_multi_sim">Mobile Settings</string>
-    <!-- button name for direct launch of Call Feature screen for Single Sim Functionality -->
-    <string name="callind">Call Feature Settings</string>
+    <string name="callind_multi_sim">SIM card settings</string>
+    <string name="sim_card_title">SIM card %d</string>
+    <string name="sim_card_summary_empty">SIM slot is empty</string>
 
     <!-- TTY Mode change is NOT allowed during a VT call -->
     <string name="tty_mode_not_allowed_vt_call">TTY Mode change is not allowed during a VT call</string>
