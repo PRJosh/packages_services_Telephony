@@ -115,8 +115,8 @@ public class SelectSubscription extends TabActivity {
             intent = new Intent().setClassName(pkg, targetClass)
                     .setAction(intent.getAction());
 
-            // For now using phone Id instead of subId
-            SubscriptionManager.putPhoneIdAndSubIdExtra(intent, i);
+            SubscriptionManager.putPhoneIdAndSubIdExtra(intent, i,
+                    sir != null ? sir.getSubscriptionId() : -1);
 
             subscriptionPref.setContent(intent);
             tabHost.addTab(subscriptionPref);
