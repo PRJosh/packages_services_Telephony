@@ -824,7 +824,7 @@ private String getSuppSvcNotificationText(SuppServiceNotification suppSvcNotific
     protected int buildConnectionCapabilities() {
         int callCapabilities = 0;
         if (mCanMerge) {
-            callCapabilities |= PhoneCapabilities.MERGE_CONFERENCE;
+            callCapabilities |= PhoneCapabilities.SHOW_MERGE_CONFERENCE;
         }
 
         if (isImsConnection()) {
@@ -858,7 +858,7 @@ private String getSuppSvcNotificationText(SuppServiceNotification suppSvcNotific
 protected int buildCallCapabilities() {
     int callCapabilities = 0;
     if (mCanMerge) {
-        callCapabilities |= PhoneCapabilities.MERGE_CONFERENCE;
+        callCapabilities |= PhoneCapabilities.SHOW_MERGE_CONFERENCE;
     }
     if (isImsConnection()) {
         callCapabilities |= PhoneCapabilities.SUPPORT_HOLD;
@@ -936,6 +936,9 @@ protected final void updateCallCapabilities() {
 
         // Set video state and capabilities
         setVideoState(mOriginalConnection.getVideoState());
+        if (mOriginalConnection.isAlive()) {
+            updateState();
+        }
         setLocalVideoCapable(mOriginalConnection.isLocalVideoCapable());
         setRemoteVideoCapable(mOriginalConnection.isRemoteVideoCapable());
         setVideoProvider(mOriginalConnection.getVideoProvider());
